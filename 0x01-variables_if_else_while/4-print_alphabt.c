@@ -1,24 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
- /**
-  * main - Entry point
-  * Return: Always 0 (Success)
-  */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (success)
+ */
+
 int main(void)
 
 {
 
 char i;
+char c;
 c = 'i';
 
-	while (i <= 'z')
-	{
-		if ((i != 'q' && i != 'e')$ c <= 'z')
-			putchar(i);
-		c++;
-	}
-			putchar('\n');
+while (i <= 'z')
+{
+if ((i != 'q' && i != 'e') c <= 'z')
+putchar(i);
+c++;
+}
+putchar('\n');
 
-		return (0);
+return (0);
 }
