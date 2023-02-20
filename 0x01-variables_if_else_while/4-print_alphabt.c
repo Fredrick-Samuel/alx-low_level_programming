@@ -9,17 +9,15 @@ int main(void)
 
 {
 
-char i;
-char c;
-c = 'i';
+int ch;
 
-while (i <= 'z')
+for (ch = 'a'; ch <= 'z'; ch++)
 {
-if ((i != 'q' && i != 'e') c <= 'z')
-putchar(i);
-c++;
+if (ch != 'e' && ch != 'q')
+{
+putchar(ch);
+}
 }
 putchar('\n');
-
 return (0);
 }
