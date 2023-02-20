@@ -3,29 +3,41 @@
 #include <time.h>
 /**
  * main - Entry point
- *
+ * Description: prints all possible combination of 2-digit numbers
  * Return: Always 0 (success)
  */
 
 int main(void)
 {
-int p, q;
+int c, i, k, j;
 
-for (p = '0'; p <= '98'; p++)
+for (c = 48; c <= 57; c++)
 {
-for (q = p + 1; q <= '99'; q++)
+for (i = 48; i <= 57; i++)
 {
-if (p != q)
+for (k = 48; k <= 57; k++)
 {
-putchar((p / 10) + '0');
-putchar((p % 10) + '0');
+for (j = 48; j <= 57; j++)
+{
+if (((k + j) > (c + i) && k >= c) || c < k)
+{
+putchar(c);
+putchar(i);
 putchar(' ');
-putchar((q / 10) + '0');
-putchar((q % 10) + '0');
-if (p == '98' && q == '99')
-continue;
+putchar(k);
+putchar(j);
+
+if (c + i + k + j == 227 && c == 57)
+{
+break;
+}
+else
+{
 putchar(',');
 putchar(' ');
+}
+}
+}
 }
 }
 }
